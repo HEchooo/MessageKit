@@ -37,7 +37,7 @@ UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIGestureRecogni
     /// The layout closure of instance `messagesCollectionView`, default nil and would call func `setupConstraints()` directly.
     /// 
     /// /// - Parameter section: (`messagesCollectionView`, `self.view`)
-    public var messagesCollectionViewLayoutClosure: ((MessagesCollectionView, UIView) -> Void)?
+    open var messagesCollectionViewLayoutClosure: ((MessagesCollectionView, UIView) -> Void)?
 
     /// The `InputBarAccessoryView` used as the `inputAccessoryView` in the view controller.
     open lazy var messageInputBar = InputBarAccessoryView()
