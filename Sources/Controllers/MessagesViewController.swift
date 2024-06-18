@@ -31,6 +31,8 @@ import InputBarAccessoryView
 open class MessagesViewController: UIViewController,
 UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIGestureRecognizerDelegate {
 
+    open var inputMenuHeight: CGFloat = 0
+    
     /// The `MessagesCollectionView` managed by the messages view controller object.
     open var messagesCollectionView = MessagesCollectionView()
     

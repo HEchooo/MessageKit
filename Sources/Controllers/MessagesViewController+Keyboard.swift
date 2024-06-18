@@ -99,7 +99,15 @@ internal extension MessagesViewController {
         let differenceOfBottomInset = newBottomInset - messageCollectionViewBottomInset
 
         UIView.performWithoutAnimation {
-            messageCollectionViewBottomInset = newBottomInset
+            if inputMenuHeight > 0 {
+                if inputMenuHeight + 56 < newBottomInset {
+                    messageCollectionViewBottomInset = newBottomInset
+                } else {
+                    messageCollectionViewBottomInset = inputMenuHeight + 56
+                }
+            } else {
+                messageCollectionViewBottomInset = newBottomInset
+            }
         }
         
         if maintainPositionOnKeyboardFrameChanged && differenceOfBottomInset != 0 {
